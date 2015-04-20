@@ -43,6 +43,7 @@ void setup() {
   size(1280, 720, OPENGL);
   // initialize SimpleOpenNI object
   context = new SimpleOpenNI(this);
+  println("Usable devices count: " + context.deviceCount());
   if (!context.enableDepth() || !context.enableUser()) { 
     // if context.enableScene() returns false
     // then the Kinect is not working correctly
